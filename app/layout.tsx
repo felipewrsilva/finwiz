@@ -9,8 +9,8 @@ const ibmPlexSerif = IBM_Plex_Serif({
   variable: '--font-ibm-plex-serif'
 })
 export const metadata: Metadata = {
-  title: "Horizon",
-  description: "Horizon is a modern baking platform for everyone.",
+  title: "FinWiz",
+  description: "FinWiz is a modern baking platform for everyone.",
   icons: {
     icon: '/icons/logo.svg'
   }
