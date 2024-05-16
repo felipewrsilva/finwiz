@@ -1,13 +1,13 @@
-import MobileNav from "@/components/MobileNav";
-import Sidebar from "@/components/Sidebar";
-import Image from "next/image";
+import MobileNav from '@/components/MobileNav'
+import Sidebar from '@/components/Sidebar'
+import Image from 'next/image'
 
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode;
+  children: React.ReactNode
 }>) {
-  const loggedIn = { firstName: "Felipe", lastName: "Silva" }
+  const loggedIn = { firstName: 'Felipe', lastName: 'Silva' }
 
   return (
     <main className="flex h-screen w-full font-inter">
@@ -22,5 +22,5 @@ export default function RootLayout({
         {children}
       </div>
     </main>
-  );
+  )
 }

@@ -9,9 +9,9 @@ import { authFormSchema } from '@/lib/utils'
 const formSchema = authFormSchema('sign-up')
 
 interface CustomInput {
-  control: Control<z.infer<typeof formSchema>>,
-  name: FieldPath<z.infer<typeof formSchema>>,
-  label: string,
+  control: Control<z.infer<typeof formSchema>>
+  name: FieldPath<z.infer<typeof formSchema>>
+  label: string
   placeholder: string
 }
 
@@ -22,9 +22,7 @@ const CustomInput = ({ control, name, label, placeholder }: CustomInput) => {
       name={name}
       render={({ field }) => (
         <div className="form-item">
-          <FormLabel className="form-label">
-            {label}
-          </FormLabel>
+          <FormLabel className="form-label">{label}</FormLabel>
           <div className="flex w-full flex-col">
             <FormControl>
               <Input
