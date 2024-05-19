@@ -37,10 +37,10 @@ const MobileNav = ({ user }: MobileNavProps) => {
               src="/icons/logo.svg"
               width={34}
               height={34}
-              alt="Finwiz logo"
+              alt="Horizon logo"
             />
             <h1 className="text-26 font-ibm-plex-serif font-bold text-black-1">
-              Finwiz
+              Horizon
             </h1>
           </Link>
           <div className="mobilenav-sheet">
@@ -83,7 +83,8 @@ const MobileNav = ({ user }: MobileNavProps) => {
                 USER
               </nav>
             </SheetClose>
-            <Footer user={user} />
+
+            <Footer user={user} type="mobile" />
           </div>
         </SheetContent>
       </Sheet>
