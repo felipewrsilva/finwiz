@@ -213,7 +213,7 @@ declare interface FooterProps {
   type?: 'mobile' | 'desktop'
 }
 
-declare interface RightSidebarProps {
+declare interface SidebarRightProps {
   user: User
   transactions: Transaction[]
   banks: Bank[] & Account[]
