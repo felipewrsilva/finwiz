@@ -43,7 +43,7 @@ const MobileNav = ({ user }: MobileNavProps) => {
               Horizon
             </h1>
           </Link>
-          <div className="mobilenav-sheet">
+          <div className="mobile-nav-sheet">
             <SheetClose asChild>
               <nav className="flex h-full flex-col gap-6 pt-16 text-white">
                 {sidebarLinks.map((item) => {
@@ -56,7 +56,7 @@ const MobileNav = ({ user }: MobileNavProps) => {
                       <Link
                         href={item.route}
                         key={item.label}
-                        className={cn('mobilenav-sheet_close w-full', {
+                        className={cn('mobile-nav-sheet_close w-full', {
                           'bg-bank-gradient': isActive,
                         })}
                       >
