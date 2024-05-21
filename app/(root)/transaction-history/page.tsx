@@ -4,6 +4,7 @@ import TransactionsTable from '@/components/TransactionsTable'
 import { getAccount, getAccounts } from '@/lib/actions/bank.actions'
 import { getLoggedInUser } from '@/lib/actions/user.actions'
 import { formatAmount } from '@/lib/utils'
+import { redirect } from 'next/navigation'
 import React from 'react'
 
 const TransactionHistory = async ({
@@ -11,6 +12,8 @@ const TransactionHistory = async ({
 }: SearchParamProps) => {
   const currentPage = Number(page as string) || 1
   const loggedIn = await getLoggedInUser()
+  if (!loggedIn) redirect('/sign-in')
+
   const accounts = await getAccounts({
     userId: loggedIn.$id,
   })

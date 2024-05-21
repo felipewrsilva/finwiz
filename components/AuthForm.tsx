@@ -15,6 +15,7 @@ import { Loader2 } from 'lucide-react'
 import { useRouter } from 'next/navigation'
 import { signIn, signUp } from '@/lib/actions/user.actions'
 import PlaidLink from './PlaidLink'
+import StatesDropdown from './StatesDropdown'
 
 const AuthForm = ({ type }: { type: string }) => {
   const router = useRouter()
@@ -54,6 +55,7 @@ const AuthForm = ({ type }: { type: string }) => {
         }
 
         const newUser = await signUp(userData)
+        console.log(newUser)
 
         setUser(newUser)
       }
@@ -67,7 +69,7 @@ const AuthForm = ({ type }: { type: string }) => {
         if (response) router.push('/')
       }
     } catch (error) {
-      console.log(error)
+      console.error(error)
     } finally {
       setIsLoading(false)
     }
@@ -115,12 +117,14 @@ const AuthForm = ({ type }: { type: string }) => {
                       name="firstName"
                       label="First Name"
                       placeholder="Enter your first name"
+                      autocomplete="given-name"
                     />
                     <CustomInput
                       control={form.control}
                       name="lastName"
                       label="Last Name"
                       placeholder="Enter your first name"
+                      autocomplete="family-name"
                     />
                   </div>
                   <CustomInput
@@ -128,25 +132,23 @@ const AuthForm = ({ type }: { type: string }) => {
                     name="address1"
                     label="Address"
                     placeholder="Enter your specific address"
+                    autocomplete="street-address"
                   />
                   <CustomInput
                     control={form.control}
                     name="city"
                     label="City"
                     placeholder="Enter your city"
+                    autocomplete="address-level2"
                   />
                   <div className="flex gap-4">
-                    <CustomInput
-                      control={form.control}
-                      name="state"
-                      label="State"
-                      placeholder="Example: NY"
-                    />
+                    <StatesDropdown control={form.control} />
                     <CustomInput
                       control={form.control}
                       name="postalCode"
                       label="Postal Code"
                       placeholder="Example: 11101"
+                      autocomplete="postal-code"
                     />
                   </div>
                   <div className="flex gap-4">
@@ -155,12 +157,14 @@ const AuthForm = ({ type }: { type: string }) => {
                       name="dateOfBirth"
                       label="Date of Birth"
                       placeholder="YYYY-MM-DD"
+                      autocomplete="false"
                     />
                     <CustomInput
                       control={form.control}
                       name="ssn"
                       label="SSN"
                       placeholder="Example: 1234"
+                      autocomplete="ssn"
                     />
                   </div>
                 </>
@@ -171,6 +175,7 @@ const AuthForm = ({ type }: { type: string }) => {
                 name="email"
                 label="Email"
                 placeholder="Enter your email"
+                autocomplete="email"
               />
 
               <CustomInput
@@ -178,6 +183,7 @@ const AuthForm = ({ type }: { type: string }) => {
                 name="password"
                 label="Password"
                 placeholder="Enter your password"
+                autocomplete="new-password"
               />
 
               <div className="flex flex-col gap-4">

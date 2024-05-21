@@ -197,6 +197,10 @@ declare interface BankDropdownProps {
   otherStyles?: string
 }
 
+declare interface StatesDropdownProps {
+  setValue: UseFormSetValue<string>
+}
+
 declare interface BankTabItemProps {
   account: Account
   appwriteItemId?: string
