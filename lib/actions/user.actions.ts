@@ -33,7 +33,7 @@ export const getUserInfo = async ({ userId }: getUserInfoProps) => {
 
     return parseStringify(user.documents[0])
   } catch (error) {
-    console.log(error)
+    console.error(error)
   }
 }
 
@@ -119,7 +119,7 @@ export const getLoggedInUser = async () => {
 
     return parseStringify(user)
   } catch (error) {
-    console.log('Not logged in')
+    console.error('Not logged in')
   }
 }
 
@@ -131,7 +131,7 @@ export const logoutAccount = async () => {
 
     await account.deleteSession('current')
   } catch (error) {
-    console.log('Logout failed')
+    console.error('Logout failed')
   }
 }
 
@@ -151,7 +151,7 @@ export const createLinkToken = async (user: User) => {
 
     return parseStringify({ linkToken: response.data.link_token })
   } catch (error) {
-    console.log(error)
+    console.error(error)
   }
 }
 
@@ -182,7 +182,7 @@ export const createBankAccount = async ({
 
     return parseStringify(bankAccount)
   } catch (error) {
-    console.log(error)
+    console.error(error)
   }
 }
 
@@ -261,7 +261,7 @@ export const getBanks = async ({ userId }: getBanksProps) => {
 
     return parseStringify(banks.documents)
   } catch (error) {
-    console.log(error)
+    console.error(error)
   }
 }
 
@@ -277,7 +277,7 @@ export const getBank = async ({ documentId }: getBankProps) => {
 
     return parseStringify(bank.documents[0])
   } catch (error) {
-    console.log(error)
+    console.error(error)
   }
 }
 
@@ -297,6 +297,6 @@ export const getBankByAccountId = async ({
 
     return parseStringify(bank.documents[0])
   } catch (error) {
-    console.log(error)
+    console.error(error)
   }
 }
