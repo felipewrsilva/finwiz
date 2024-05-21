@@ -132,6 +132,7 @@ export const logoutAccount = async () => {
     await account.deleteSession('current')
   } catch (error) {
     console.error('Logout failed')
+    return null
   }
 }
 
