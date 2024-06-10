@@ -28,11 +28,11 @@ const CustomInput = ({
       control={control}
       name={name}
       render={({ field }) => (
-        <div className="form-item">
+        <div className="form-item w-full">
           <FormLabel className="form-label" htmlFor={name}>
             {label}
           </FormLabel>
-          <div className="flex w-full flex-col">
+          <div className="flex flex-col">
             <FormControl>
               <Input
                 id={name}
