@@ -1,36 +1,35 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+# FinWiz: Advanced Personal Finance Management
 
-First, run the development server:
+FinWiz is a cutting-edge financial SaaS platform that revolutionizes personal finance management. By seamlessly integrating multiple bank accounts, FinWiz provides real-time transaction monitoring, secure fund transfers, and comprehensive financial oversight, all within a user-friendly interface.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Features
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- **Secure Authentication**: Ultra-secure SSR authentication with robust validation and authorization mechanisms.
+- **Bank Integration**: Effortlessly connect and manage multiple bank accounts using the Plaid API.
+- **Dashboard**: Comprehensive overview of user finances, displaying total balances, recent transactions, and expenditure breakdowns.
+- **Bank Management**: Detailed account information for each connected bank, including balances and account details.
+- **Transaction History**: Paginated views and filters for a detailed transaction history across different banks.
+- **Real-time Updates**: Immediate reflection of changes upon linking new bank accounts or making transactions.
+- **Funds Transfer**: Secure fund transfers via Dwolla, with necessary fields and recipient bank IDs for streamlined transactions.
+- **Responsive Design**: Seamless user experience across desktops, tablets, and mobile devices, maintaining consistent functionality and accessibility.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Technology Stack
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- **Frontend**: Next.js, TypeScript, React Hook Form, TailwindCSS, Chart.js, ShadCN
+- **Backend**: Appwrite
+- **APIs**: Plaid, Dwolla
+- **Validation**: Zod
 
-## Learn More
+## Overview
 
-To learn more about Next.js, take a look at the following resources:
+FinWiz simplifies financial management by providing an intuitive dashboard that allows users to track their finances effortlessly. The platform's design ensures scalability and responsiveness, making it accessible and efficient on any device. With secure authentication and real-time updates, users can trust FinWiz to keep their financial information safe and current.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## How It Works
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+1. **Bank Connections**: Easily link multiple bank accounts via the Plaid API for a comprehensive view of your finances.
+2. **Transaction Management**: Monitor and manage transactions securely, with detailed history and filters for better tracking.
+3. **Fund Transfers**: Transfer funds securely through Dwolla, with seamless integration of necessary information.
+4. **Dashboard**: Access an all-in-one dashboard to view account balances, recent transactions, and spending habits.
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+FinWiz is engineered to provide a hassle-free, secure, and efficient financial management experience. Whether you're tracking your daily expenses or managing multiple accounts, FinWiz is your go-to platform for personal finance management.
