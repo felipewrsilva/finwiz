@@ -36,5 +36,5 @@ FinWiz is engineered to provide a hassle-free, secure, and efficient financial m
 
 ## How It Works
 
-**Test User:** felipe@gmail.com
-**Password:** 123456789
+- **Test User:** felipe@gmail.com
+- **Password:** 123456789
