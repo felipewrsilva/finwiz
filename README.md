@@ -34,7 +34,7 @@ FinWiz simplifies financial management by providing an intuitive dashboard that 
 
 FinWiz is engineered to provide a hassle-free, secure, and efficient financial management experience. Whether you're tracking your daily expenses or managing multiple accounts, FinWiz is your go-to platform for personal finance management.
 
-## How It Works
+## Login
 
 - **Test User:** felipe@gmail.com
 - **Password:** 123456789
